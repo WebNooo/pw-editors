@@ -7,7 +7,7 @@ namespace Helper
 		{
 		}
 
-		public void Open()
+		public void Open(string filename)
 		{
 
 		}

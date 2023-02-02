@@ -7,7 +7,8 @@
   <ItemGroup>
     <None Remove="Pck\" />
   </ItemGroup>
+
   <ItemGroup>
-    <Folder Include="Pck\" />
+    <PackageReference Include="Zlib.Portable" Version="1.11.0" />
   </ItemGroup>
 </Project>
