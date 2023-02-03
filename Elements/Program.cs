@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Text;
 using Helper;
+using Helper.Pck;
 
 namespace Elements
 {
@@ -7,12 +9,15 @@ namespace Elements
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            System.Text.Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
 
             var pck = new Pck();
 
-            pck.Open();
-            
+            pck.Open("/Users/nooo/Downloads/pw156/element/configs.pck");
+            var current = pck.Pcks[0];
+
+            Console.WriteLine("Hello World!");
         }
     }
 }

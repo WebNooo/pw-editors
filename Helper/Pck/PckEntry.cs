@@ -10,7 +10,7 @@ namespace Helper.Pck
     {
         public string FilePath { get; set; }
 
-        public ObservableCollection<FileTableEntry> items = new ObservableCollection<FileTableEntry>();
+        public ObservableCollection<FileTableEntry> Items = new ObservableCollection<FileTableEntry>();
 
         public Binary Binary { get; set; }
 
@@ -19,7 +19,7 @@ namespace Helper.Pck
 
 
     //Keys
-    public int Key1 { get; set; }
+        public int Key1 { get; set; }
         public int Key2 { get; set; }
         public int Asig1 { get; set; }
         public int Asig2 { get; set; }

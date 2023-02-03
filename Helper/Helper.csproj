@@ -6,9 +6,10 @@
 
   <ItemGroup>
     <None Remove="Pck\" />
+    <None Remove="DotNetZip" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Zlib.Portable" Version="1.11.0" />
+    <PackageReference Include="DotNetZip" Version="1.16.0" />
   </ItemGroup>
 </Project>

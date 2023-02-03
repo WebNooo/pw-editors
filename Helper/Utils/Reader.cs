@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Helper.Utils
@@ -67,6 +68,11 @@ namespace Helper.Utils
             var target = new byte[size];
             Array.Copy(value, target, target.Length >= value.Length ? value.Length : target.Length);
             return target;
+        }
+
+        internal void FileStream(string path)
+        {
+            Source = File.ReadAllBytes(path);
         }
     }
 }
