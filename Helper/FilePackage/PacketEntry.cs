@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace Helper.Pck
+namespace Helper.FilePackage
 {
-    public class PckEntry
+    public class PacketEntry
     {
         public string FilePath { get; set; }
 
-        public ObservableCollection<FileTableEntry> Items = new ObservableCollection<FileTableEntry>();
+        public ObservableCollection<FileEntry> Items = new ObservableCollection<FileEntry>();
 
         public Binary Binary { get; set; }
 

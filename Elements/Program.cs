@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using Helper;
-using Helper.Pck;
+using Helper.FilePackage;
 
 namespace Elements
 {
@@ -9,13 +9,13 @@ namespace Elements
     {
         static void Main(string[] args)
         {
-            System.Text.Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
 
-            var pck = new Pck();
+            var filePackage = new FilePackage();
 
-            pck.Open("/Users/nooo/Downloads/pw156/element/configs.pck");
-            var current = pck.Pcks[0];
+            filePackage.Open("/Users/nooo/Downloads/pw156/element/configs.pck");
+            var current = filePackage.Pcks[0];
 
             Console.WriteLine("Hello World!");
         }

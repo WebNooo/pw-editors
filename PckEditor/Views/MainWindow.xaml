@@ -1,0 +1,35 @@
+﻿<Window x:Class="PckEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="FilePackage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <TreeView Grid.Column="0"/>
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="2"/>
+        <ListView Grid.Column="2" ItemsSource="{Binding Files}" SelectedItem="{Binding SelectFile}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="400" DisplayMemberBinding="{Binding FileName}"/>
+                    <GridViewColumn Header="Length" Width="50" DisplayMemberBinding="{Binding Length}"/>
+                    <GridViewColumn Header="CompressedLength" Width="50" DisplayMemberBinding="{Binding CompressedLength}"/>
+                    
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <!--<TextBlock Grid.Row="1" Text="Время чтения: " />-->
+        <TextBlock Grid.Row="1" Text="{Binding ReadTime}" />
+    </Grid>
+</Window>
